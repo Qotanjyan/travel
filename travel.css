@@ -145,10 +145,11 @@ body {
 }
 
 .btn-light{
-    background-color: orange;
+    background-color: #ee580f;;
     color: white;
     border: none;
-    font-size:40px;
+    padding:15px 40px;
+    font-size:20px;
     border-radius: 50px;
 }
 
@@ -160,4 +161,37 @@ body {
 .read_more_btn{
     display:block;
     text-align: center;
+}
+
+.form_title{
+    float: left;
+    margin-top: -65px;
+    background: white;
+    padding: 10px 30px;
+    margin-left: -20px;
+    color: #0a4668;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main_form{
+    background:#ffffffe8;
+    margin:20px;
+    padding:20px;
+}
+
+.form-control{
+    margin-bottom:10px;
+}
+
+.search_col>a{
+    background: #ee580f;
+    color: #fff;
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    border: solid #ee580f 1px;
+    padding: 10px 77px;
+    margin: 57px 0px 0px 25px;
+    text-decoration: none;
 }
