@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
 }
 
-.container-fluid { 
+.header-container { 
     background: url(https://html.design/demo/eforlad/images/banner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -140,10 +140,6 @@ body {
     color:aqua;
 }
 
-.white{
-    color:white;
-}
-
 .btn-light{
     background-color: #ee580f;;
     color: white;
@@ -168,16 +164,24 @@ body {
     margin-top: -65px;
     background: white;
     padding: 10px 30px;
-    margin-left: -20px;
+    /* margin-left: -20px; */
     color: #0a4668;
     font-size: 18px;
     font-weight: 600;
+    position: absolute;
+    top: 20px;
+    left: 0;
 }
 
 .main_form{
-    background:#ffffffe8;
     margin:20px;
     padding:20px;
+    display: flex;
+}
+
+.form_container{
+    background:#ffffffe8;
+    position: relative;
 }
 
 .form-control{
@@ -192,6 +196,60 @@ body {
     font-weight: 400;
     border: solid #ee580f 1px;
     padding: 10px 77px;
-    margin: 57px 0px 0px 25px;
     text-decoration: none;
+}
+
+.search_col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.info_block h1:nth-child(2)
+{
+    color: white;
+    font-weight: bold;
+}
+
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.tour_text{
+    transition: background 2s,-webkit-text-fill-color 1s;
+    -webkit-transition: background 2s,-webkit-text-fill-color 1s;
+}
+
+@media only screen and (max-width: 640px){
+    .tour_text{
+        background: -webkit-linear-gradient( rgb(219, 219, 219),rgb(0, 0, 0));
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #848484b0;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .main_form{
+        flex-direction: column;
+    }
 }
