@@ -263,18 +263,21 @@ strong {
 }
 
 .about_agency,
-.select_offers {
+.select_offers,
+.weekend {
     text-align: center;
 }
 
 .about_agency>h1,
-.select_offers>h1 {
+.select_offers>h1,
+.weekend>h1 {
     font-weight: 700;
     font-size: 45px;
 }
 
 .about_agency>p,
-.select_offers>p {
+.select_offers>p,
+.weekend>p {
     font-size: 19px;
 }
 
@@ -310,4 +313,19 @@ strong {
     background-repeat: no-repeat;
     background-size: cover;
     height:100%;
+}
+
+.icon_row{
+    text-align: center;
+}
+
+.mountains_tours>h1,
+.different_countries>h1,
+.bus_tours>h1,
+.summer_rest>h1{
+    font-size: 25px;
+}
+
+.london_pic>img{
+    width:100%;
 }
