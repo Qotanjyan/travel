@@ -2,11 +2,11 @@ body {
     box-sizing: border-box;
 }
 
-/* .header-container {
+.header-container {
     background: url(https://html.design/demo/eforlad/images/banner.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-} */
+}
 
 .navbar.navbar-expand-lg.bg-light {
     padding: 0px;
@@ -243,20 +243,7 @@ strong {
     -webkit-transition: background 2s, -webkit-text-fill-color 1s;
 }
 
-@media only screen and (max-width: 640px) {
-    .tour_text {
-        background: -webkit-linear-gradient(rgb(219, 219, 219), rgb(0, 0, 0));
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: #848484b0;
-    }
-}
 
-@media only screen and (max-width: 767px) {
-    .main_form {
-        flex-direction: column;
-    }
-}
 
 .m-0-50 {
     margin: 0 50px;
@@ -275,6 +262,35 @@ strong {
     font-size: 45px;
 }
 
+
+
+.text_with_lines{
+    position: relative;
+    display: inline-block;
+}
+
+.text_with_lines::before,.text_with_lines::after {
+    content: "";
+    position: absolute;
+    border-top: solid 1px #00fffb;
+    top: 27px;
+    width: 149px;
+    /* left: 172px; */
+    height: 5px;
+}
+
+.text_with_lines::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.text_with_lines::after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+
 .about_agency>p,
 .select_offers>p,
 .weekend>p {
@@ -284,17 +300,43 @@ strong {
 .plane_box {
     position: relative;
     display: flex;
-    border: 15px solid #077f9b;
+    /* border: 15px solid #077f9b; */
     padding: 30px 20px;
     margin-right: 170px;
     border-radius: 5px;
+
+    margin: 50px auto;
+    padding: 60px 25px;
+
+    border-left: 15px solid #077f9b;
+    border-right: 15px solid #0c1e43;
+
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 20px;
+    -moz-background-size: 100% 20px;
+    background-size: 100% 20px;
+    background-image: -webkit-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -webkit-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
+    /* background-image: -moz-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -moz-linear-gradient(left, #077f9b 0%, #0c1e434 100%); */
+    background-image: -o-linear-gradient(left, #077f9b 0%, #0c1e43 100%), -o-linear-gradient(left, #077f9b 0%, #0c1e43 100%);
+    background-image: linear-gradient(to right, #077f9b 0%, #0c1e43 100%), linear-gradient(to right, #077f9b 0%, #0c1e43 100%);
+    max-width: 1004px;
 }
 
 .plane_box_text>p {
     display: inline-block;
     padding-right: 490px;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 32px;
+    /* max-width: 1004px; */
+
 }
+
 
 .plane_box_img {
     position: absolute;
@@ -307,7 +349,6 @@ strong {
 }
 
 .parallax{
-    background-image: url(https://html.design/demo/eforlad/images/banner.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -315,17 +356,161 @@ strong {
     height:100%;
 }
 
+.about_us_section{
+    background-image: url(https://html.design/demo/eforlad/images/banner.jpg);
+
+}
+
 .icon_row{
     text-align: center;
 }
 
-.mountains_tours>h1,
-.different_countries>h1,
-.bus_tours>h1,
-.summer_rest>h1{
+.circle_icon{
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 20px);
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.icon_header_img{
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+.circle_icon>h1{
     font-size: 25px;
+}
+
+.circle_icon .btn{
+    margin:  0 auto;
+    margin-block-start: auto;
 }
 
 .london_pic>img{
     width:100%;
 }
+
+@media screen and (max-width: 1210px){
+    .plane_box_img{
+       display:none;
+    }
+}
+
+@media screen and (max-width: 1210px){
+    .plane_box_text>p{
+       padding-right: 0px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .text_with_lines::before, .text_with_lines::after {
+        width: 129px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    .text_with_lines::before, .text_with_lines::after {
+        width: 84px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .text_with_lines::before, .text_with_lines::after {
+        width: 57px;
+    }
+}
+
+@media (max-width: 575px){
+    .text_with_lines::before, .text_with_lines::after {
+        width: 0px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .tour_text {
+        background: -webkit-linear-gradient(rgb(219, 219, 219), rgb(0, 0, 0));
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #848484b0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main_form {
+        flex-direction: column;
+    }
+}
+
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+
+  
+  
+  .icon_header_img:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  .icon_header_img:hover:before, .icon_header_img:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  
+  .icon_header_img::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  .icon_header_img::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
