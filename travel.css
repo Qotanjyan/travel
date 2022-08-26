@@ -507,12 +507,22 @@ strong {
 }
 
 .owl-carousel {
-    display: inline-flex;
+    display: block;
+}
+
+.owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 .owl_item {
     width: 363.333px;
     margin-right: 10px;
+}
+
+.owl-dot.active {
+    background: #15cfe5 !important;
 }
 
 .london_tour {
@@ -636,4 +646,8 @@ footer {
 .copyright_paragraph>a {
     text-decoration: none;
     color: white;
+}
+
+.owl-nav {
+    display: none;
 }
